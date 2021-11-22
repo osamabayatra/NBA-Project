@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>NBA API</title>
+</head>
+
+<body>
+    <div id="input-container">
+        <input type="text" placeholder="Type Team Name">
+        <button id="dream-btn">Dream Team</button>
+        <button id="search-btn">Search <i class="fa fa-search" aria-hidden="true"></i></i></button>
+    </div>
+    <div id="results">
+
+    </div>
+
+    <script id="players-template" type="text/x-handlebars">
+        {{#each players}}
+        <div class="player" style="border: 1px solid black;">
+            <h2>{{fname}} {{lname}}</h2>
+            <h4>{{number}}</h4>
+            <h4>{{pos}}</h4>
+            <!-- <p class="player-id">{{id}}</p> -->
+            <img src="{{url}}" alt="">
+        </div>
+        {{/each}}
+    </script>
+
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/handlebars/dist/handlebars.js"></script>
+    <script src="view.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
